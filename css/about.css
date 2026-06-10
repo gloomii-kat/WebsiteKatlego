@@ -51,7 +51,7 @@
 .avatar-badge--1 { top: 8%; right: -8%; color: var(--accent); }
 .avatar-badge--2 { bottom: 12%; left: -8%; color: var(--secondary); }
 
-.avatar-links { display: flex; gap: 0.75rem; }
+.avatar-links { display: flex; gap: 0.75rem; position: relative; z-index: 2; }
 .avatar-link {
   width: 40px; height: 40px; border-radius: 100%;
   background: white; border: 1.5px solid rgba(126,64,32,0.15);

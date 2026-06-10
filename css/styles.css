@@ -287,6 +287,13 @@ section { padding: 6rem 0; }
   cursor: pointer;
   transition: transform var(--transition), box-shadow var(--transition);
 }
+
+.project-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* fills the thumb area, crops if needed */
+  object-position: center; /* change to "top" if you want the top of the image shown */
+}
 .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(41,48,39,0.1); }
 .project-card__thumb {
   height: 160px;
