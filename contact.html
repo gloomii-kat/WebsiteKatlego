@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Katlego Mashego</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+
+  <!-- ── Nav ── -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">KM</a>
+      <ul class="nav__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="tutoring.html">Tutoring</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Mobile menu ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="about.html"    onclick="closeMobile()">About</a>
+    <a href="projects.html" onclick="closeMobile()">Projects</a>
+    <a href="tutoring.html" onclick="closeMobile()">Tutoring</a>
+    <a href="contact.html"  onclick="closeMobile()">Contact</a>
+  </div>
+
+  <!-- ── Page ── -->
+  <div class="page-wrap">
+
+    <!-- Left panel -->
+    <div class="left-panel">
+      <div class="left-panel__bg"></div>
+      <p class="left-panel__eyebrow fade-up">Get in touch</p>
+      <h1 class="fade-up">Let's<br>talk.</h1>
+      <p class="left-panel__sub fade-up">
+        Whether you're a recruiter with an opportunity or a parent looking for the right tutor — I'd love to hear from you.
+      </p>
+
+      <div class="contact-info fade-up">
+        <div class="contact-info-item">
+          <div class="contact-info-item__icon">✉️</div>
+          <div>
+            <p class="contact-info-item__label">Email</p>
+            <p class="contact-info-item__value">
+              <a href="mailto:katlego@example.com">katlego@example.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-item__icon">📍</div>
+          <div>
+            <p class="contact-info-item__label">Location</p>
+            <p class="contact-info-item__value">Gauteng, South Africa</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-item__icon">⏱️</div>
+          <div>
+            <p class="contact-info-item__label">Response time</p>
+            <p class="contact-info-item__value">Usually within 24 hours</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-item__icon">💼</div>
+          <div>
+            <p class="contact-info-item__label">LinkedIn</p>
+            <p class="contact-info-item__value">
+              <a href="#">linkedin.com/in/katlego-mashego</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="audience-tabs fade-up">
+        <p class="audience-tabs__label">I'm reaching out as a…</p>
+        <div class="audience-tabs__pills">
+          <button class="audience-pill active" data-audience="recruiter">Recruiter</button>
+          <button class="audience-pill" data-audience="parent">Parent / Guardian</button>
+          <button class="audience-pill" data-audience="other">Other</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right panel -->
+    <div class="right-panel">
+
+      <!-- Form section -->
+      <div id="formSection">
+        <div class="form-header fade-up">
+          <p class="form-header__context" id="formContext">Graduate &amp; career enquiries</p>
+          <h2 id="formHeading">Send me a message</h2>
+          <p class="form-header__sub" id="formSubheading">Fill in the form and I'll get back to you as soon as possible.</p>
+        </div>
+
+        <div class="form-hint fade-up" id="formHint">
+          <span class="form-hint__icon">💡</span>
+          <span id="formHintText">Let me know which role or programme you're recruiting for — it helps me respond faster.</span>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+
+          <div class="field-row">
+            <div class="field fade-up" id="field-name">
+              <label for="name">Full Name <span class="required">*</span></label>
+              <div class="input-wrap">
+                <input type="text" id="name" name="name" placeholder="e.g. Naledi Mokoena" autocomplete="name" />
+                <span class="valid-check" aria-hidden="true">✓</span>
+              </div>
+              <span class="field__error" role="alert">⚠ Please enter your full name.</span>
+            </div>
+            <div class="field fade-up" id="field-email">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <div class="input-wrap">
+                <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" />
+                <span class="valid-check" aria-hidden="true">✓</span>
+              </div>
+              <span class="field__error" role="alert">⚠ Please enter a valid email address.</span>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field fade-up" id="field-phone">
+              <label for="phone">Phone Number</label>
+              <div class="input-wrap">
+                <input type="tel" id="phone" name="phone" placeholder="e.g. 082 000 0000" autocomplete="tel" />
+                <span class="valid-check" aria-hidden="true">✓</span>
+              </div>
+              <span class="field__error" role="alert"></span>
+            </div>
+            <div class="field fade-up" id="field-subject">
+              <label for="subject">Subject <span class="required">*</span></label>
+              <div class="input-wrap">
+                <select id="subject" name="subject">
+                  <option value="">Select a topic…</option>
+                  <option value="graduate">Graduate programme enquiry</option>
+                  <option value="internship">Internship opportunity</option>
+                  <option value="tutoring">Book a tutoring session</option>
+                  <option value="tutoring-info">Tutoring information</option>
+                  <option value="collaboration">Collaboration / project</option>
+                  <option value="other">Other</option>
+                </select>
+                <span class="valid-check" aria-hidden="true">✓</span>
+              </div>
+              <span class="field__error" role="alert">⚠ Please select a subject.</span>
+            </div>
+          </div>
+
+          <!-- Tutoring extra fields (hidden by default) -->
+          <div id="tutoringFields" class="tutoring-fields">
+            <div class="field-row">
+              <div class="field" id="field-grade">
+                <label for="grade">Child's Grade</label>
+                <div class="input-wrap">
+                  <select id="grade" name="grade">
+                    <option value="">Select grade…</option>
+                    <option>Grade 8</option>
+                    <option>Grade 9</option>
+                    <option>Grade 10</option>
+                    <option>Grade 11</option>
+                    <option>Grade 12</option>
+                  </select>
+                  <span class="valid-check" aria-hidden="true">✓</span>
+                </div>
+                <span class="field__error"></span>
+              </div>
+              <div class="field" id="field-subject2">
+                <label for="subject2">Subject(s) Needed</label>
+                <div class="input-wrap">
+                  <select id="subject2" name="subject2">
+                    <option value="">Select subject…</option>
+                    <option>Mathematics</option>
+                    <option>Physical Sciences</option>
+                    <option>Both</option>
+                  </select>
+                  <span class="valid-check" aria-hidden="true">✓</span>
+                </div>
+                <span class="field__error"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="field fade-up" id="field-message">
+            <label for="message">Message <span class="required">*</span></label>
+            <div class="input-wrap">
+              <textarea id="message" name="message" placeholder="Tell me a bit about what you're looking for…" maxlength="1000"></textarea>
+            </div>
+            <div class="field__bottom">
+              <span class="field__error" role="alert">⚠ Please include a message (at least 20 characters).</span>
+              <span class="field__meta" id="charCount">0 / 1000</span>
+            </div>
+          </div>
+
+          <div class="form-footer fade-up">
+            <button type="submit" class="btn-submit" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+            <p class="form-note">I'll reply to your email address within 24 hours.</p>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Success state -->
+      <div class="success-state" id="successState">
+        <div class="success-icon">✓</div>
+        <h3>Message sent!</h3>
+        <p>Thanks for reaching out. I'll read your message and get back to you at your email address within 24 hours.</p>
+        <button class="btn-reset" id="resetBtn">Send another message</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Scripts ── -->
+  <script src="js/nav.js"></script>
+  <script src="js/form.js"></script>
+  <script>
+    initNav({ sections: [], heroSelector: null });
+    initContactForm();
+  </script>
+
+</body>
+</html>

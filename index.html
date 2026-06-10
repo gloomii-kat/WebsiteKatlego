@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katlego Mashego — Engineering Student & Tutor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ── Nav ── -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">KM</a>
+      <ul class="nav__links">
+        <li><a href="about.html"    data-section="about">About</a></li>
+        <li><a href="projects.html" data-section="projects">Projects</a></li>
+        <li><a href="tutoring.html" data-section="tutoring">Tutoring</a></li>
+        <li><a href="contact.html"  data-section="contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Mobile menu ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="about.html"    onclick="closeMobile()">About</a>
+    <a href="projects.html" onclick="closeMobile()">Projects</a>
+    <a href="tutoring.html" onclick="closeMobile()">Tutoring</a>
+    <a href="contact.html"  onclick="closeMobile()">Contact</a>
+  </div>
+
+  <!-- ── Scroll spy ── -->
+  <nav class="scroll-spy" aria-label="Page sections">
+    <div class="scroll-spy__dot active" data-target="hero"     title="Home"></div>
+    <div class="scroll-spy__dot"        data-target="about"    title="About"></div>
+    <div class="scroll-spy__dot"        data-target="projects" title="Projects"></div>
+    <div class="scroll-spy__dot"        data-target="tutoring" title="Tutoring"></div>
+    <div class="scroll-spy__dot"        data-target="contact"  title="Contact"></div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section id="hero">
+    <div class="hero__bg"></div>
+    <div class="container">
+      <div class="hero__grid">
+        <div>
+          <p class="hero__eyebrow fade-up">Engineering Student</p>
+          <h1 class="hero__name fade-up">Katlego<br>Mashego</h1>
+          <p class="hero__role fade-up">Electrical Engineer · Developer · Tutor</p>
+          <p class="hero__desc fade-up">
+            Second-year Electrical Engineering student at the University of the Witwatersrand.
+            I build things from C++ simulations to Unity games and I help others
+            understand the maths and science behind it all.
+          </p>
+          <div class="hero__ctas fade-up">
+            <a href="projects.html" class="btn btn--primary">View My Work →</a>
+            <a href="contact.html"  class="btn btn--outline">Get in Touch</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__avatar-wrap">
+            <div class="hero__avatar-inner">KM</div>
+            <div class="hero__badge hero__badge--1">⚙️ Engineering</div>
+            <div class="hero__badge hero__badge--2">📐 Mathematics</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About strip ── -->
+  <section id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__text fade-up">
+          <p class="section-label">Who I Am</p>
+          <h2 class="section-title">Engineer, creator, and educator.</h2>
+          <p>
+            I'm a second-year Electrical Engineering student passionate about the intersection
+            of engineering fundamentals and software. I apply analytical thinking to real
+            problems whether that's a circuit analysis or a 2D game engine.
+          </p>
+          <p>
+            Alongside my studies I tutor Maths and Physical Sciences to high school learners
+            across Gauteng, turning complex concepts into clear, learnable steps.
+          </p>
+          <div class="about__skills">
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Unity / C#</span>
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">HTML · CSS · JS</span>
+            <span class="skill-tag">Circuit Analysis</span>
+          </div>
+        </div>
+
+        <div class="about__highlights">
+          <div class="highlight-card fade-up">
+            <div class="highlight-card__icon">🎓</div>
+            <p class="highlight-card__title">University of the Witwatersrand</p>
+            <p class="highlight-card__text">BEng Electrical Engineering — second year, expected 2025.</p>
+          </div>
+          <div class="highlight-card fade-up">
+            <div class="highlight-card__icon">💻</div>
+            <p class="highlight-card__title">Self-taught Developer</p>
+            <p class="highlight-card__text">Built games in Unity and simulations in C++ beyond coursework.</p>
+          </div>
+          <div class="highlight-card fade-up">
+            <div class="highlight-card__icon">📚</div>
+            <p class="highlight-card__title">Private Tutor</p>
+            <p class="highlight-card__text">Maths &amp; Physical Sciences · consistent mark improvements each term.</p>
+          </div>
+          <div class="highlight-card fade-up">
+            <div class="highlight-card__icon">🏆</div>
+            <p class="highlight-card__title">Top Submissions</p>
+            <p class="highlight-card__text">Distinction in Structural Analysis Lab; top 15% Heat Exchanger Design.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Projects ── -->
+  <section id="projects">
+    <div class="container">
+      <div class="projects__header">
+        <div class="fade-up">
+          <p class="section-label">What I've Built</p>
+          <h2 class="section-title">Selected projects.</h2>
+          <p class="section-sub">Engineering simulations, games, and tools — built out of curiosity and coursework.</p>
+        </div>
+        <div class="fade-up">
+          <a href="projects.html" class="btn btn--outline">All Projects →</a>
+        </div>
+      </div>
+
+      <div class="project-grid">
+        <div class="project-card fade-up">
+          <div class="project-card__thumb project-card__thumb--cpp">⚙️</div>
+          <div class="project-card__body">
+            <p class="project-card__cat">C++ · Simulation</p>
+            <h3 class="project-card__title">Truss Analysis Solver</h3>
+            <p class="project-card__desc">Method-of-joints solver with file I/O and visual output. Under 3% deviation vs. FEA.</p>
+            <div class="project-card__tags">
+              <span class="tag">C++</span>
+              <span class="tag">Structural</span>
+              <span class="tag">MATLAB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-up">
+          <div class="project-card__thumb project-card__thumb--unity">🎮</div>
+          <div class="project-card__body">
+            <p class="project-card__cat">Unity · C#</p>
+            <h3 class="project-card__title">2D Platformer</h3>
+            <p class="project-card__desc">Fully playable platformer showcased at Lab Demo Day. Custom physics and level design.</p>
+            <div class="project-card__tags">
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">Game Dev</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-up">
+          <div class="project-card__thumb project-card__thumb--eng">📐</div>
+          <div class="project-card__body">
+            <p class="project-card__cat">Thermodynamics · Design</p>
+            <h3 class="project-card__title">Heat Exchanger Design</h3>
+            <p class="project-card__desc">Shell-and-tube design meeting thermal duty with an 8% safety margin. Top 15% cohort ranking.</p>
+            <div class="project-card__tags">
+              <span class="tag">MATLAB</span>
+              <span class="tag">Thermo</span>
+              <span class="tag">SolidWorks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Tutoring ── -->
+  <section id="tutoring">
+    <div class="container">
+      <div class="tutoring__grid">
+        <div class="fade-up">
+          <p class="section-label">Private Tutoring</p>
+          <h2 class="section-title">Maths &amp; Science, made clear.</h2>
+          <p class="section-sub">One-on-one sessions tailored to each learner, from Gr 8 foundations to matric exam prep.</p>
+
+          <div class="subject-list">
+            <div class="subject-item">
+              <div class="subject-item__icon">📐</div>
+              <div class="subject-item__info">
+                <p class="subject-item__name">Mathematics</p>
+                <p class="subject-item__detail">Grades 8–12 · Algebra, Calculus, Geometry, Statistics</p>
+              </div>
+            </div>
+            <div class="subject-item">
+              <div class="subject-item__icon">⚗️</div>
+              <div class="subject-item__info">
+                <p class="subject-item__name">Physical Sciences</p>
+                <p class="subject-item__detail">Grades 10–12 · Mechanics, Electricity, Waves &amp; Matter</p>
+              </div>
+            </div>
+          </div>
+          <a href="tutoring.html" class="btn btn--primary">Learn More →</a>
+        </div>
+
+        <div class="tutoring__why fade-up">
+          <p class="section-label">Why it works</p>
+          <div class="reason">
+            <span class="reason__num">01</span>
+            <div>
+              <p class="reason__title">Engineer's precision</p>
+              <p class="reason__text">I explain from first principles, not just formulas — so learners actually understand.</p>
+            </div>
+          </div>
+          <div class="reason">
+            <span class="reason__num">02</span>
+            <div>
+              <p class="reason__title">Proven results</p>
+              <p class="reason__text">Students consistently improve within one term; several moved from failing to passing.</p>
+            </div>
+          </div>
+          <div class="reason">
+            <span class="reason__num">03</span>
+            <div>
+              <p class="reason__title">Flexible sessions</p>
+              <p class="reason__text">In-person across Gauteng or online — scheduled around school commitments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact CTA ── -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header fade-up">
+        <p class="section-label">Let's Connect</p>
+        <h2 class="section-title">Ready to work together?</h2>
+        <p class="section-sub">Whether you're a recruiter, a parent looking for a tutor, or just curious — I'd love to hear from you.</p>
+      </div>
+      <div class="contact__ctas fade-up">
+        <a href="contact.html" class="btn btn--inverse">Send a Message</a>
+        <a href="about.html"   class="btn btn--ghost">Read My Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__logo">KM</span>
+        <nav class="footer__links">
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="tutoring.html">Tutoring</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <span>© 2025 Katlego Mashego</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Scripts ── -->
+  <script src="js/nav.js"></script>
+  <script>
+    // Page-specific boot — tell nav.js which sections exist on this page
+    initNav({
+      sections:     ['hero', 'about', 'projects', 'tutoring', 'contact'],
+      heroSelector: '#hero',
+      features:     ['projectFilter']
+    });
+  </script>
+
+</body>
+</html>

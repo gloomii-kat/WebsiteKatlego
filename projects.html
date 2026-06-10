@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Katlego Mashego</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+</head>
+<body>
+
+  <!-- ── Nav ── -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">KM</a>
+      <ul class="nav__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="tutoring.html">Tutoring</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Mobile menu ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="about.html"    onclick="closeMobile()">About</a>
+    <a href="projects.html" onclick="closeMobile()">Projects</a>
+    <a href="tutoring.html" onclick="closeMobile()">Tutoring</a>
+    <a href="contact.html"  onclick="closeMobile()">Contact</a>
+  </div>
+
+  <!-- ── Page header ── -->
+  <header class="page-header">
+    <div class="page-header__bg"></div>
+    <div class="page-header__inner">
+      <p class="page-header__eyebrow">Portfolio</p>
+      <h1>My Projects</h1>
+      <p class="page-header__sub">Technical work spanning systems programming, game development, and engineering lab investigations.</p>
+    </div>
+  </header>
+
+  <!-- ── Count bar ── -->
+  <div class="count-bar">
+    <div>
+      <div class="count-bar__num" id="visibleCount">9</div>
+      <div class="count-bar__label">Projects</div>
+    </div>
+    <div class="count-bar__divider"></div>
+    <div>
+      <div class="count-bar__num">3</div>
+      <div class="count-bar__label">Categories</div>
+    </div>
+  </div>
+
+  <!-- ── Main layout ── -->
+  <div class="projects-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <p class="sidebar__label">Filter by</p>
+      <ul class="filter-list" id="filterList">
+        <li class="filter-item active" data-filter="all">
+          <div class="filter-item__icon">🗂️</div>
+          <div class="filter-item__info">
+            <span class="filter-item__name">All Work</span>
+            <span class="filter-item__count">9 projects</span>
+          </div>
+        </li>
+        <li class="filter-item" data-filter="cpp">
+          <div class="filter-item__icon">⚙️</div>
+          <div class="filter-item__info">
+            <span class="filter-item__name">C++</span>
+            <span class="filter-item__count">3 projects</span>
+          </div>
+        </li>
+        <li class="filter-item" data-filter="unity">
+          <div class="filter-item__icon">🎮</div>
+          <div class="filter-item__info">
+            <span class="filter-item__name">Unity / C#</span>
+            <span class="filter-item__count">3 projects</span>
+          </div>
+        </li>
+        <li class="filter-item" data-filter="eng">
+          <div class="filter-item__icon">🔬</div>
+          <div class="filter-item__info">
+            <span class="filter-item__name">Engineering Labs</span>
+            <span class="filter-item__count">3 projects</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="sidebar__divider"></div>
+
+      <div class="sidebar__cv">
+        <p>Want the full picture? Download my CV for academic history and contact details.</p>
+        <a href="#">Download CV →</a>
+      </div>
+    </aside>
+
+    <!-- Grid -->
+    <div>
+      <div class="project-grid" id="projectGrid">
+
+        <!-- C++ -->
+        <div class="project-card fade-up" data-category="cpp"
+          data-title="Data Structures Library"
+          data-desc-long="A comprehensive C++ library implementing linked lists (singly and doubly), stacks, queues, and binary search trees from scratch. Each structure is templated for type flexibility and includes a full test suite. The project emphasises clean OOP design, memory management without leaks, and clear API documentation. Built as part of a data structures module with extensions added independently."
+          data-role="Sole developer — designed architecture, wrote all code and documentation"
+          data-outcome="Passed all unit tests with zero memory leaks; used as reference implementation by coursemates"
+          data-tags="C++,OOP,Algorithms,Memory Management,Templates"
+          data-emoji="⚙️" data-thumb="cpp">
+          <div class="project-card__thumb project-card__thumb--cpp">
+            <div class="project-card__thumb-emoji">⚙️</div>
+            <span class="project-card__cat-badge badge--cpp">C++</span>
+          </div>
+          <div class="project-card__body">
+            <h2 class="project-card__title">Data Structures Library</h2>
+            <p class="project-card__desc">Custom implementation of linked lists, stacks, queues, and BSTs with templating and full test coverage.</p>
+            <div class="project-card__tags">
+              <span class="tag">C++</span><span class="tag">OOP</span><span class="tag">Algorithms</span>
+            </div>
+            <span class="project-card__link">View Details →</span>
+          </div>
+        </div>
+
+        <div class="project-card fade-up" data-category="cpp"
+          data-title="Console Banking System"
+          data-desc-long="A fully-featured console application simulating a banking system. Features include account creation, login with PIN validation, deposits, withdrawals, transfers between accounts, and a full transaction history. Implemented using file I/O for persistent storage, with exception handling for all edge cases. Demonstrates structured programming, file handling, and input validation in C++."
+          data-role="Sole developer — designed system architecture and all features"
+          data-outcome="Fully functional with persistent file storage; scored distinction in coursework submission"
+          data-tags="C++,File I/O,Exception Handling,CLI,OOP"
+          data-emoji="🏦" data-thumb="cpp">
+          <div class="project-card__thumb project-card__thumb--cpp">
+            <div class="project-card__thumb-emoji">🏦</div>
+            <span class="project-card__cat-badge badge--cpp">C++</span>
+          </div>
+          <div class="project-card__body">
+            <h2 class="project-card__title">Console Banking System</h2>
+            <p class="project-card__desc">Terminal-based banking app with account management, PIN login, transfers, and persistent file storage.</p>
+            <div class="project-card__tags">
+              <span class="tag">C++</span><span class="tag">File I/O</span><span class="tag">CLI</span>
+            </div>
+            <span class="project-card__link">View Details →</span>
+          </div>
+        </div>
+
+        <div class="project-card fade-up" data-category="cpp"
+          data-title="Sorting Algorithm Visualiser"
+          data-desc-long="An interactive console application that visualises the step-by-step execution of bubble sort, selection sort, insertion sort, merge sort, quick sort, and heap sort. Each algorithm outputs its state at each pass, allowing direct comparison of how elements move. Includes a benchmarking mode that times each algorithm on arrays of varying sizes and outputs a comparison table. Built to deepen understanding of algorithm complexity."
+          data-role="Sole developer — implemented all six algorithms and visualisation logic"
+          data-outcome="Clear demonstration of O(n²) vs O(n log n) performance differences on large arrays"
+          data-tags="C++,Algorithms,Sorting,Big-O,Benchmarking"
+          data-emoji="📊" data-thumb="cpp">
+          <div class="project-card__thumb project-card__thumb--cpp">
+            <div class="project-card__thumb-emoji">📊</div>
+            <span class="project-card__cat-badge badge--cpp">C++</span>
+          </div>
+          <div class="project-card__body">
+            <h2 class="project-card__title">Sorting Algorithm Visualiser</h2>
+            <p class="project-card__desc">Step-by-step console visualisation of 6 sorting algorithms with benchmarking and complexity comparison.</p>
+            <div class="project-card__tags">
+              <span class="tag">C++</span><span class="tag">Algorithms</span><span class="tag">Big-O</span>
+            </div>
+            <span class="project-card__link">View Details →</span>
+          </div>
+        </div>
+
+        <!-- Unity -->
+        <div class="project-card fade-up" data-category="unity"
+          data-title="2D Platformer Game"
+          data-desc-long="A fully playable 2D platformer developed in Unity using C#. Features include custom character controller physics, three enemy types with basic AI (patrol, chase, and ranged attack), collectible items, a health system, three complete levels, and a main menu. Sound effects and background music were sourced and integrated. The game loop includes a win/lose condition with scene transitions. Focused on polished feel through animation blending and particle effects."
+          data-role="Sole developer — game design, programming, level design, and audio integration"
+          data-outcome="Fully playable game with complete game loop; presented in a public lab showcase"
+          data-tags="Unity,C#,Game Design,Physics,Animation,Level Design"
+          data-emoji="🎮" data-thumb="unity">
+          <div class="project-card__thumb project-card__thumb--unity">
+            <div class="project-card__thumb-emoji">🎮</div>
+            <span class="project-card__cat-badge badge--unity">Unity / C#</span>
+          </div>
+          <div class="project-card__body">
+            <h2 class="project-card__title">2D Platformer Game</h2>
+            <p class="project-card__desc">Polished Unity platformer with custom physics, three enemy types, three levels, and a complete game loop.</p>
+            <div class="project-card__tags">
+              <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Game Design</span>
+            </div>
+            <span class="project-card__link">View Details →</span>
+          </div>
+        </div>
+
+        <div class="project-card fade-up" data-category="unity"
+          data-title="RPG Inventory System"
+          data-desc-long="A reusable Unity inventory system designed for RPG games. Players can pick up, drop, equip, and stack items using a drag-and-drop grid-based interface. Items display detailed tooltips on hover. The system uses ScriptableObjects for item definitions, making it easy to extend with new item types. Includes equipment slots (weapon, armour, accessory) with stat bonuses that update a character stats panel in real time."
+          data-role="Sole developer — designed architecture using ScriptableObjects and Unity UI Toolkit"
+          data-outcome="Modular system reused in two subsequent Unity projects; cleanly decoupled from game logic"
+          data-tags="Unity,C#,UI Toolkit,ScriptableObjects,RPG Systems"
+          data-emoji="🎒" data-thumb="unity">
+          <div class="project-card__thumb project-card__thumb--unity">
+            <div class="project-card__thumb-emoji">🎒</div>
+            <span class="project-card__cat-badge badge--unity">Unity / C#</span>
+          </div>
+          <div class="project-card__body">
+            <h2 class="project-card__title">RPG Inventory System</h2>
+            <p class="project-card__desc">Modular drag-and-drop inventory with item stacking, equipment slots, and ScriptableObject architecture.</p>
+            <div class="project-card__tags">
+              <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">ScriptableObjects</span>
+            </div>
+            <span class="project-card__link">View Details →</span>
+          </div>
+        </div>
+
+        <div class="project-card fade-up" data-category="unity"
+          data-title="Procedural Terrain Generator"
+          data-desc-long="A real-time procedural terrain generation system built in Unity. Uses layered Perlin noise to generate height maps, which are rendered as voxel meshes divided into chunks for performance. The system dynamically loads and unloads chunks as the player moves, keeping memory usage efficient. Terrain features biomes (grassland, desert, snow) determined by temperature and moisture noise maps. Includes a simple first-person controller for exploration."
+          data-role="Sole developer — researched chunk-based generation and implemented full pipeline"
+          data-outcome="Infinite terrain generation at 60fps with smooth chunk loading and biome transitions"
+          data-tags="Unity,C#,Procedural Generation,Perlin Noise,Performance"
+          data-emoji="🏔️" data-thumb="unity">
+          <div class="project-card__thumb project-card__thumb--unity">
+            <div class="project-card__thumb-emoji">🏔️</div>
+            <span class="project-card__cat-badge badge--unity">Unity / C#</span>
+          </div>
+          <div class="project-card__body">
+            <h2 class="project-card__title">Procedural Terrain Generator</h2>
+            <p class="project-card__desc">Infinite voxel terrain with Perlin noise, chunk-based loading, and multi-biome generation at 60fps.</p>
+            <div class="project-card__tags">
+              <span class="tag">Unity</span><span class="tag">Procedural Gen</span><span class="tag">C#</span>
+            </div>
+            <span class="project-card__link">View Details →</span>
+          </div>
+        </div>
+
+        <!-- Engineering Labs -->
+        <div class="project-card fade-up" data-category="eng"
+          data-title="Truss Structural Analysis"
+          data-desc-long="A formal engineering lab investigation into the structural behaviour of a Warren truss under various loading conditions. Used the method of joints and method of sections to calculate member forces analytically, then validated results using a finite element simulation. Findings were written up as a full technical report with CAD diagrams, data tables, and error analysis. Demonstrated close correlation between theoretical and simulated results."
+          data-role="Individual lab and report — analysis, simulation, and full write-up"
+          data-outcome="Less than 3% deviation between analytical and simulated results; report graded with distinction"
+          data-tags="Structural Analysis,FEA,CAD,Technical Writing,Beam Theory"
+          data-emoji="🏗️" data-thumb="eng">
+          <div class="project-card__thumb project-card__thumb--eng">
+            <div class="project-card__thumb-emoji">🏗️</div>
+            <span class="project-card__cat-badge badge--eng">Eng Labs</span>
+          </div>
+          <div class="project-card__body">
+            <h2 class="project-card__title">Truss Structural Analysis</h2>
+            <p class="project-card__desc">Warren truss analysis using method of joints/sections with FEA validation and full technical report.</p>
+            <div class="project-card__tags">
+              <span class="tag">FEA</span><span class="tag">CAD</span><span class="tag">Structural Analysis</span>
+            </div>
+            <span class="project-card__link">View Details →</span>
+          </div>
+        </div>
+
+        <div class="project-card fade-up" data-category="eng"
+          data-title="Fluid Flow Pipe Lab"
+          data-desc-long="A fluid mechanics laboratory investigating the transition between laminar and turbulent flow in a pipe using water at controlled flow rates. Measured pressure drops across the pipe and calculated flow velocity, Reynolds number, and friction factor for each trial. Plotted a Moody diagram from collected data and compared against published correlations. Report includes full uncertainty analysis and discusses sources of experimental error."
+          data-role="Lab partner collaboration — equal contribution to experiment, data analysis, and report"
+          data-outcome="Results aligned with Moody chart within acceptable uncertainty bounds; distinction awarded"
+          data-tags="Fluid Mechanics,Reynolds Number,Data Analysis,Technical Writing,Lab Work"
+          data-emoji="💧" data-thumb="eng">
+          <div class="project-card__thumb project-card__thumb--eng">
+            <div class="project-card__thumb-emoji">💧</div>
+            <span class="project-card__cat-badge badge--eng">Eng Labs</span>
+          </div>
+          <div class="project-card__body">
+            <h2 class="project-card__title">Fluid Flow Pipe Lab</h2>
+            <p class="project-card__desc">Laminar-to-turbulent flow investigation with Reynolds number calculation and Moody diagram analysis.</p>
+            <div class="project-card__tags">
+              <span class="tag">Fluid Mechanics</span><span class="tag">Data Analysis</span><span class="tag">Lab</span>
+            </div>
+            <span class="project-card__link">View Details →</span>
+          </div>
+        </div>
+
+        <div class="project-card fade-up" data-category="eng"
+          data-title="Heat Exchanger Design"
+          data-desc-long="A thermodynamics design project requiring the sizing of a counter-flow shell-and-tube heat exchanger to transfer a specified thermal load between two fluid streams. Applied LMTD and NTU-effectiveness methods to determine required heat transfer area, then selected tube diameter, shell diameter, and baffle spacing. Compared design against commercially available units and assessed cost versus performance trade-offs. Final deliverable was a detailed design report with annotated CAD drawings."
+          data-role="Sole designer — full thermal analysis, sizing calculation, and design report"
+          data-outcome="Design met specified thermal duty with 8% safety margin; ranked in top 15% of submissions"
+          data-tags="Thermodynamics,Heat Transfer,LMTD,CAD,Engineering Design"
+          data-emoji="🌡️" data-thumb="eng">
+          <div class="project-card__thumb project-card__thumb--eng">
+            <div class="project-card__thumb-emoji">🌡️</div>
+            <span class="project-card__cat-badge badge--eng">Eng Labs</span>
+          </div>
+          <div class="project-card__body">
+            <h2 class="project-card__title">Heat Exchanger Design</h2>
+            <p class="project-card__desc">Counter-flow shell-and-tube heat exchanger sizing using LMTD and NTU methods with CAD documentation.</p>
+            <div class="project-card__tags">
+              <span class="tag">Thermodynamics</span><span class="tag">LMTD</span><span class="tag">CAD</span>
+            </div>
+            <span class="project-card__link">View Details →</span>
+          </div>
+        </div>
+
+      </div><!-- /project-grid -->
+
+      <div class="empty-state" id="emptyState">
+        <div class="empty-state__icon">🗂️</div>
+        <p>No projects in this category yet.</p>
+      </div>
+    </div>
+  </div><!-- /projects-layout -->
+
+  <!-- ── Modal ── -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal" id="modal">
+      <button class="modal__close" id="modalClose" aria-label="Close project details">✕</button>
+      <div class="modal__thumb" id="modalThumb"></div>
+      <div class="modal__body">
+        <p class="modal__cat"     id="modalCat"></p>
+        <h2 class="modal__title"  id="modalTitle"></h2>
+        <p class="modal__section-label">Overview</p>
+        <p class="modal__desc"    id="modalDesc"></p>
+        <p class="modal__section-label">My Role</p>
+        <p class="modal__desc"    id="modalRole"></p>
+        <p class="modal__section-label">Outcome</p>
+        <p class="modal__desc"    id="modalOutcome"></p>
+        <p class="modal__section-label">Technologies &amp; Tools</p>
+        <div class="modal__tags"  id="modalTags"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Scripts ── -->
+  <script src="js/nav.js"></script>
+  <script src="js/projects.js"></script>
+  <script>
+    initNav({ sections: [], heroSelector: null });
+    initProjects();
+  </script>
+
+</body>
+</html>

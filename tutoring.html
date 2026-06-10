@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutoring — Katlego Mashego</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/tutoring.css" />
+</head>
+<body>
+
+  <!-- ── Nav ── -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">KM</a>
+      <ul class="nav__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="tutoring.html" class="active">Tutoring</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Mobile menu ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="about.html"    onclick="closeMobile()">About</a>
+    <a href="projects.html" onclick="closeMobile()">Projects</a>
+    <a href="tutoring.html" onclick="closeMobile()">Tutoring</a>
+    <a href="contact.html"  onclick="closeMobile()">Contact</a>
+  </div>
+
+  <!-- ── Scroll spy ── -->
+  <nav class="scroll-spy" aria-label="Page sections">
+    <div class="scroll-spy__dot active" data-target="hero"         title="Intro"></div>
+    <div class="scroll-spy__dot"        data-target="subjects"     title="Subjects"></div>
+    <div class="scroll-spy__dot"        data-target="approach"     title="Approach"></div>
+    <div class="scroll-spy__dot"        data-target="format"       title="Format"></div>
+    <div class="scroll-spy__dot"        data-target="testimonials" title="Testimonials"></div>
+    <div class="scroll-spy__dot"        data-target="faq"          title="FAQ"></div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section id="hero">
+    <div class="hero__bg"></div>
+    <div class="container">
+      <div class="hero__grid">
+        <div>
+          <p class="hero__eyebrow fade-up">Tutoring Services</p>
+          <h1 class="hero__title fade-up">Capable.<br>Patient.<br>Trusted.</h1>
+          <p class="hero__sub fade-up">One-on-one Maths and Physical Sciences tutoring for high school learners in Gauteng — online or in-person, built around your child's needs.</p>
+          <div class="hero__ctas fade-up">
+            <a href="contact.html" class="btn btn--inverse">Book a Session</a>
+            <a href="#subjects"    class="btn btn--ghost">See Subjects ↓</a>
+          </div>
+          <div class="hero__stats fade-up">
+            <div><div class="hero__stat-num">Gr 8–12</div><div class="hero__stat-label">All high school levels</div></div>
+            <div><div class="hero__stat-num">2</div><div class="hero__stat-label">Core subjects</div></div>
+            <div><div class="hero__stat-num">24h</div><div class="hero__stat-label">Reply time</div></div>
+          </div>
+        </div>
+        <div class="trust-card fade-up">
+          <p class="trust-card__header">Why parents choose me</p>
+          <div class="trust-item">
+            <div class="trust-item__icon">🎓</div>
+            <div><p class="trust-item__title">Academically credible</p><p class="trust-item__text">Currently studying Engineering — strong in Maths and Sciences at university level.</p></div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item__icon">💬</div>
+            <div><p class="trust-item__title">Clear communicator</p><p class="trust-item__text">I explain concepts in multiple ways until they click — no learner gets left behind.</p></div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item__icon">📱</div>
+            <div><p class="trust-item__title">Easy to reach</p><p class="trust-item__text">Flexible scheduling, online or in-person, with regular progress updates for parents.</p></div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item__icon">🎯</div>
+            <div><p class="trust-item__title">Results-focused</p><p class="trust-item__text">Every session has a clear goal — whether it's exam prep, concept clarity, or building confidence.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Subjects ── -->
+  <section id="subjects">
+    <div class="container">
+      <div class="subjects__intro">
+        <div class="fade-up">
+          <p class="section-label">What I Teach</p>
+          <h2 class="section-title">Two subjects.<br>Taught deeply.</h2>
+          <p class="section-sub">I focus on Mathematics and Physical Sciences so I can offer genuine depth rather than surface-level coverage. Both subjects are taught from foundations up — no shortcuts.</p>
+        </div>
+        <div class="fade-up">
+          <p class="section-sub">I cover the full CAPS curriculum for both subjects, with particular focus on areas learners typically find hardest — like calculus, algebraic fractions, electricity, and chemical equations.</p>
+          <p class="section-sub" style="margin-top:1rem;">Sessions can be structured around a specific exam, a topic causing difficulty, or regular weekly support — whatever fits your child's situation.</p>
+        </div>
+      </div>
+
+      <div class="subject-cards fade-up">
+        <div class="subject-card subject-card--maths">
+          <div class="subject-card__header">
+            <div class="subject-card__icon">📊</div>
+            <h3 class="subject-card__name">Mathematics</h3>
+            <p class="subject-card__grades">Grades 8 – 12</p>
+          </div>
+          <div class="subject-card__body">
+            <ul class="subject-card__topics">
+              <li>Algebra &amp; equations</li>
+              <li>Functions &amp; graphs</li>
+              <li>Trigonometry</li>
+              <li>Euclidean geometry</li>
+              <li>Calculus (differentiation &amp; integration)</li>
+              <li>Statistics &amp; probability</li>
+              <li>Financial mathematics</li>
+            </ul>
+          </div>
+        </div>
+        <div class="subject-card subject-card--science">
+          <div class="subject-card__header">
+            <div class="subject-card__icon">⚡</div>
+            <h3 class="subject-card__name">Physical Sciences</h3>
+            <p class="subject-card__grades">Grades 10 – 12</p>
+          </div>
+          <div class="subject-card__body">
+            <ul class="subject-card__topics">
+              <li>Mechanics &amp; Newton's laws</li>
+              <li>Waves, sound &amp; light</li>
+              <li>Electricity &amp; magnetism</li>
+              <li>Organic chemistry</li>
+              <li>Chemical change &amp; reactions</li>
+              <li>Matter &amp; materials</li>
+              <li>Doppler effect &amp; photoelectric</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-up" style="margin-top:3rem;">
+        <p class="section-label" style="margin-bottom:1.25rem;">Grade levels I cover</p>
+        <div class="levels-grid">
+          <div class="level-pill"><div class="level-pill__grade">8</div><div class="level-pill__label">Grade 8</div></div>
+          <div class="level-pill"><div class="level-pill__grade">9</div><div class="level-pill__label">Grade 9</div></div>
+          <div class="level-pill"><div class="level-pill__grade">10</div><div class="level-pill__label">Grade 10</div></div>
+          <div class="level-pill"><div class="level-pill__grade">11</div><div class="level-pill__label">Grade 11</div></div>
+          <div class="level-pill"><div class="level-pill__grade">12</div><div class="level-pill__label">Grade 12</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Approach ── -->
+  <section id="approach">
+    <div class="container">
+      <div class="approach__grid">
+        <div class="approach__visual">
+          <div class="approach__circle">📚</div>
+          <div class="approach__float approach__float--1">Concept first</div>
+          <div class="approach__float approach__float--2">Exam ready</div>
+          <div class="approach__float approach__float--3">✓ Confidence built</div>
+        </div>
+        <div class="fade-up">
+          <p class="section-label">My Teaching Approach</p>
+          <h2 class="section-title">Understanding first.<br>Speed follows.</h2>
+          <p class="section-sub" style="margin-bottom:2.5rem;">Memorising formulas gets you through one test. Understanding them gets you through your entire school career — and beyond.</p>
+          <div class="approach__steps">
+            <div class="approach__step">
+              <div class="approach__step-num">01</div>
+              <div><p class="approach__step-title">Diagnose the gap</p><p class="approach__step-text">Every first session starts with understanding where a learner actually is — not where the syllabus says they should be. We identify the real sticking point.</p></div>
+            </div>
+            <div class="approach__step">
+              <div class="approach__step-num">02</div>
+              <div><p class="approach__step-title">Build the foundation</p><p class="approach__step-text">Before moving forward, I make sure the underlying concept is solid. We work through explanations, examples, and analogies until it truly makes sense.</p></div>
+            </div>
+            <div class="approach__step">
+              <div class="approach__step-num">03</div>
+              <div><p class="approach__step-title">Practice with purpose</p><p class="approach__step-text">Guided problem-solving builds fluency. I select questions that target weak spots and increase in difficulty as confidence grows.</p></div>
+            </div>
+            <div class="approach__step">
+              <div class="approach__step-num">04</div>
+              <div><p class="approach__step-title">Review &amp; reinforce</p><p class="approach__step-text">Each session ends with a quick recap and a small set of practice questions to consolidate. Progress is tracked across sessions.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Format ── -->
+  <section id="format">
+    <div class="container">
+      <div class="fade-up" style="text-align:center;margin-bottom:3.5rem;">
+        <p class="section-label">How Sessions Work</p>
+        <h2 class="section-title">Flexible by design.</h2>
+        <p class="section-sub" style="max-width:520px;margin:0 auto;">Sessions are structured around your child — not a fixed formula. Here's what to expect.</p>
+      </div>
+      <div class="format__grid">
+        <div class="format-card fade-up">
+          <div class="format-card__icon">🏠</div>
+          <p class="format-card__title">In-Person</p>
+          <p class="format-card__text">Sessions at your home or a convenient location in Gauteng. Works well for learners who benefit from a physical study environment and direct engagement.</p>
+          <p class="format-card__detail">Gauteng area · Travel may apply</p>
+        </div>
+        <div class="format-card fade-up">
+          <div class="format-card__icon">💻</div>
+          <p class="format-card__title">Online</p>
+          <p class="format-card__text">Live video sessions via Google Meet or Zoom, with shared screen for working through problems in real time. Fully interactive — not just watching.</p>
+          <p class="format-card__detail">Anywhere in South Africa</p>
+        </div>
+        <div class="format-card fade-up">
+          <div class="format-card__icon">📅</div>
+          <p class="format-card__title">Scheduling</p>
+          <p class="format-card__text">Sessions run from 60 to 90 minutes. Weekday afternoons and weekends available. Intensive exam-prep blocks can be arranged during school holidays.</p>
+          <p class="format-card__detail">Flexible · Weekdays &amp; weekends</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Testimonials ── -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="fade-up" style="margin-bottom:3.5rem;">
+        <p class="section-label">What Parents Say</p>
+        <h2 class="section-title">Trust, built session by session.</h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-card__quote-mark">"</div>
+          <p class="testimonial-card__text">My daughter went from failing Maths to passing with a 68% in one term. Katlego has a way of explaining things that makes it feel simple — she actually started enjoying the subject.</p>
+          <div class="testimonial-card__footer">
+            <div class="testimonial-card__avatar avatar--a">Z</div>
+            <div><div class="stars">★★★★★</div><p class="testimonial-card__name">Zanele D.</p><p class="testimonial-card__role">Parent · Grade 11 learner</p></div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-card__quote-mark">"</div>
+          <p class="testimonial-card__text">We needed help specifically with Physical Sciences mechanics before the matric trial exam. The sessions were focused, clear, and my son walked into the exam feeling prepared for the first time.</p>
+          <div class="testimonial-card__footer">
+            <div class="testimonial-card__avatar avatar--b">T</div>
+            <div><div class="stars">★★★★★</div><p class="testimonial-card__name">Thabo M.</p><p class="testimonial-card__role">Parent · Grade 12 learner</p></div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-card__quote-mark">"</div>
+          <p class="testimonial-card__text">Very professional and reliable. Katlego always came prepared with material, kept us updated on our child's progress, and adjusted the sessions when needed. Highly recommend.</p>
+          <div class="testimonial-card__footer">
+            <div class="testimonial-card__avatar avatar--c">N</div>
+            <div><div class="stars">★★★★★</div><p class="testimonial-card__name">Nomsa K.</p><p class="testimonial-card__role">Parent · Grade 10 learner</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section id="faq">
+    <div class="container">
+      <div class="faq__grid">
+        <div>
+          <p class="section-label fade-up">Common Questions</p>
+          <h2 class="section-title fade-up">Questions parents<br>usually ask.</h2>
+          <div class="faq__list fade-up">
+            <div class="faq-item">
+              <div class="faq-item__question">How do I book a first session?<span class="faq-item__chevron">▼</span></div>
+              <p class="faq-item__answer">Send me a message via the contact page. Include your child's grade, the subject they need help with, and a rough idea of availability. I'll reply within 24 hours to confirm a first session.</p>
+            </div>
+            <div class="faq-item">
+              <div class="faq-item__question">What does a session cost?<span class="faq-item__chevron">▼</span></div>
+              <p class="faq-item__answer">Rates depend on grade level, subject, and whether the session is online or in-person. Contact me directly for a quote — I aim to keep pricing fair and accessible.</p>
+            </div>
+            <div class="faq-item">
+              <div class="faq-item__question">How many sessions does my child need?<span class="faq-item__chevron">▼</span></div>
+              <p class="faq-item__answer">It depends on the goal. For ongoing support, one or two sessions per week works well. For focused exam prep, an intensive block of daily sessions can be arranged. I'll give an honest assessment after the first session.</p>
+            </div>
+            <div class="faq-item">
+              <div class="faq-item__question">Do you provide materials or notes?<span class="faq-item__chevron">▼</span></div>
+              <p class="faq-item__answer">Yes — I prepare session materials, worked examples, and practice questions. For online sessions these are shared digitally. Learners should also bring their school textbooks and past papers.</p>
+            </div>
+            <div class="faq-item">
+              <div class="faq-item__question">Will I know how my child is progressing?<span class="faq-item__chevron">▼</span></div>
+              <p class="faq-item__answer">Absolutely. I give brief updates after each session and flag any areas of concern. Parents are always welcome to check in — I see the relationship with the family as part of the support.</p>
+            </div>
+            <div class="faq-item">
+              <div class="faq-item__question">What if my child misses a session?<span class="faq-item__chevron">▼</span></div>
+              <p class="faq-item__answer">Life happens. I ask for at least 24 hours notice where possible so we can reschedule. Repeated last-minute cancellations may affect availability.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq__cta fade-up">
+          <p class="faq__cta-eyebrow">Ready to start?</p>
+          <h3>Let's find the right support for your child.</h3>
+          <p>Send me a message with your child's grade and subject — I'll be in touch within 24 hours to discuss how I can help and what a first session would look like.</p>
+          <a href="contact.html" class="btn btn--inverse">Book a Session →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Final CTA ── -->
+  <section id="cta">
+    <div class="container">
+      <p class="section-label">Get Started Today</p>
+      <h2 class="section-title fade-up">Your child can get there.<br>Let's work together.</h2>
+      <p class="section-sub fade-up">One message is all it takes. I'll handle the rest.</p>
+      <div class="cta__buttons fade-up">
+        <a href="contact.html"              class="btn btn--inverse">Book a Tutoring Session</a>
+        <a href="mailto:katlego@example.com" class="btn btn--ghost">katlego@example.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Scripts ── -->
+  <script src="js/nav.js"></script>
+  <script>
+    initNav({
+      sections:     ['hero', 'subjects', 'approach', 'format', 'testimonials', 'faq'],
+      heroSelector: '#hero',
+      features:     ['faqAccordion']
+    });
+  </script>
+
+</body>
+</html>

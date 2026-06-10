@@ -1,0 +1,268 @@
+/* ============================================================
+   layout.css
+   Grid systems, containers, section spacing, page structure,
+   and all responsive breakpoints.
+   This file is linked AFTER styles.css on every page.
+   ============================================================ */
+
+
+/* ── 1. CONTAINER ───────────────────────────────────────────
+   The main centred wrapper. Wrap any section's inner content
+   in <div class="container"> to keep it within --max-w.
+
+   Usage:
+     <section>
+       <div class="container">
+         ... your content ...
+       </div>
+     </section>
+   ─────────────────────────────────────────────────────────── */
+.container {
+  max-width: var(--max-w); /* 1160px — set in styles.css */
+  margin: 0 auto;          /* centres the container horizontally */
+  padding: 0 2rem;         /* 32px breathing room on left and right */
+}
+
+
+/* ── 2. SECTION SPACING ─────────────────────────────────────
+   Every <section> gets consistent vertical padding by default.
+   Override per-section where needed with a more specific rule.
+   ─────────────────────────────────────────────────────────── */
+section {
+  padding: 6rem 0; /* 96px top and bottom */
+}
+
+
+/* ── 3. GRID SYSTEMS ────────────────────────────────────────
+   Reusable grid classes you can apply directly in HTML.
+   Based on your PRD's hybrid two-column / three-column approach.
+
+   Usage:
+     <div class="grid-2">   — two equal columns
+     <div class="grid-3">   — three equal columns
+     <div class="grid-4">   — four equal columns
+     <div class="grid-2 grid-2--wide"> — 40/60 split
+   ─────────────────────────────────────────────────────────── */
+
+/* Two equal columns */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Two columns with a wider right side (text + visual pattern) */
+.grid-2--wide {
+  grid-template-columns: 1fr 1.6fr;
+}
+
+/* Two columns, vertically centred (used for hero sections) */
+.grid-2--center {
+  align-items: center;
+  gap: 5rem;
+}
+
+/* Three equal columns — project cards, format cards, testimonials */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Four equal columns — values section */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+/* Five equal columns — grade level pills */
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
+}
+
+
+/* ── 4. FLEX UTILITIES ──────────────────────────────────────
+   For simpler one-dimensional layouts.
+
+   Usage:
+     <div class="flex-between"> — space-between alignment
+     <div class="flex-center">  — centred both axes
+   ─────────────────────────────────────────────────────────── */
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+
+/* ── 5. SECTION BACKGROUND VARIANTS ────────────────────────
+   Alternating section backgrounds keep the page from
+   feeling monotonous. Apply these to <section> elements.
+
+   Usage:
+     <section class="bg-primary">   — warm cream (default)
+     <section class="bg-neutral">   — off-white
+     <section class="bg-secondary"> — deep brown
+     <section class="bg-accent">    — purple
+   ─────────────────────────────────────────────────────────── */
+.bg-primary   { background: var(--primary); }
+.bg-neutral   { background: var(--light-neutral); }
+.bg-secondary { background: var(--secondary); }
+.bg-accent    { background: var(--accent); }
+
+
+/* ── 6. PAGE HERO LAYOUT ────────────────────────────────────
+   Shared structure for the top hero area on inner pages
+   (About, Projects, Tutoring, Contact).
+   The homepage hero has its own bespoke layout.
+   ─────────────────────────────────────────────────────────── */
+.page-hero {
+  padding-top: calc(var(--nav-h) + 5rem); /* clears the fixed nav */
+  padding-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero__eyebrow {
+  font-family: var(--font-sub);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.page-hero__eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background: currentColor;
+}
+
+.page-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.05;
+  margin-bottom: 1.25rem;
+}
+
+.page-hero__sub {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+  opacity: 0.72;
+}
+
+
+/* ── 7. CARD COMPONENTS ─────────────────────────────────────
+   Shared card base styles. Each page's specific card builds
+   on top of .card with its own modifier class.
+
+   Usage:
+     <div class="card">           — base white card
+     <div class="card card--lift"> — adds hover lift effect
+   ─────────────────────────────────────────────────────────── */
+.card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(126,64,32,0.1);
+  overflow: hidden;
+}
+
+.card--lift {
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+.card--lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(41,48,39,0.1);
+  border-color: rgba(100,37,116,0.2);
+}
+
+.card--pad {
+  padding: 1.5rem; /* use when the card has no thumb image */
+}
+
+
+/* ── 8. RESPONSIVE BREAKPOINTS ──────────────────────────────
+   Three breakpoints matching your PRD's responsive strategy:
+     960px  — tablet: two columns, hamburger appears
+     620px  — mobile: single column, stacked layout
+
+   Rules are mobile-first when sensible, but since your base
+   CSS is desktop-first, overrides go inside max-width queries.
+   ─────────────────────────────────────────────────────────── */
+
+/* ── Tablet (960px and below) ── */
+@media (max-width: 960px) {
+
+  /* All two-column grids collapse to one column */
+  .grid-2,
+  .grid-2--wide,
+  .grid-2--center {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  /* Three-column grids drop to two */
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Four-column grids drop to two */
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Hide the desktop nav links, show the hamburger */
+  .nav__links { display: none; }
+  .hamburger  { display: flex; }
+
+  /* Hide the scroll spy dots — too small to be useful on tablet */
+  .scroll-spy { display: none; }
+
+  /* Slightly reduce section padding */
+  section { padding: 5rem 0; }
+}
+
+/* ── Mobile (620px and below) ── */
+@media (max-width: 620px) {
+
+  /* Everything becomes a single column */
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: 1fr 1fr; } /* keep 2-col on small screens */
+  .grid-5 { grid-template-columns: repeat(3, 1fr); } /* 3 pills per row */
+
+  /* Reduce section padding further */
+  section { padding: 4rem 0; }
+
+  /* Container gets slightly less horizontal padding */
+  .container { padding: 0 1.25rem; }
+
+  /* Flex rows wrap and stack on very small screens */
+  .flex-between { flex-direction: column; align-items: flex-start; }
+}
