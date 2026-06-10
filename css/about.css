@@ -1,9 +1,4 @@
-/* ════════════════════════════════════════
-   about.css  —  page-specific styles
-   Shared tokens & components → styles.css
-════════════════════════════════════════ */
-
-/* ── Intro section ── */
+/* Intro section  */
 #intro {
   padding-top: calc(var(--nav-h) + 5rem);
   padding-bottom: 5rem;
@@ -58,12 +53,33 @@
 
 .avatar-links { display: flex; gap: 0.75rem; }
 .avatar-link {
-  width: 42px; height: 42px; border-radius: 50%;
+  width: 40px; height: 40px; border-radius: 100%;
   background: white; border: 1.5px solid rgba(126,64,32,0.15);
   display: flex; align-items: center; justify-content: center;
   font-size: 1rem;
   transition: all var(--transition); cursor: pointer;
 }
+
+.avatar-outer {
+  width: clamp(110px, 26vw, 320px);
+  aspect-ratio: 1;
+  border-radius: 40% 60% 55% 45% / 45% 40% 60% 55%;
+  position: relative;
+  overflow: visible;        /* badges can poke outside */
+}
+.avatar-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;   /* adjust to top/center/bottom to reframe your face */
+  border-radius: inherit;
+  display: block;
+  transform: scale(1.50
+  );           /* change this value to zoom  */
+  transform-origin: center top;  /* zoom anchored to top so face stays in frame */
+  overflow: hidden;
+}
+
 .avatar-link:hover {
   border-color: var(--accent); background: var(--accent-light); transform: translateY(-2px);
 }
