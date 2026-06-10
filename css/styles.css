@@ -20,7 +20,7 @@
   --transition:     0.25s ease;
 }
 
-/* ── Reset ── */
+/*   Reset    */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -31,10 +31,11 @@ body {
   line-height: 1.65;
   overflow-x: hidden;
 }
+
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 
-/* ── Nav ── */
+/*   Nav  */
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   height: var(--nav-h);
@@ -46,8 +47,9 @@ a { color: inherit; text-decoration: none; }
 }
 .nav.nav--hidden { transform: translateY(-100%); opacity: 0; }
 .nav__inner {
-  max-width: var(--max-w); width: 100%; margin: 0 auto;
-  padding: 0 2rem;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 3rem;
   display: flex; align-items: center; justify-content: space-between;
 }
 .nav__logo {
@@ -71,6 +73,8 @@ a { color: inherit; text-decoration: none; }
 }
 .nav__links a:hover,
 .nav__links a.active { opacity: 1; color: var(--secondary); }
+
+/*   hamburger menu  */
 .hamburger {
   display: none; background: none; border: none; cursor: pointer;
   flex-direction: column; gap: 5px; padding: 4px;
@@ -96,7 +100,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--secondary);
 }
 
-/* ── Scroll indicator ── */
+/*   Scroll indicator   */
 .scroll-spy {
   position: fixed; right: 1.5rem; top: 50%; transform: translateY(-50%);
   z-index: 90; display: flex; flex-direction: column; gap: 10px;
@@ -111,11 +115,11 @@ a { color: inherit; text-decoration: none; }
   transform: scale(1.4);
 }
 
-/* ── Layout helpers ── */
+/*   Layout helpers   */
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
 section { padding: 6rem 0; }
 
-/* ── Hero ── */
+/*   Hero    */
 #hero {
   min-height: 100vh;
   display: grid; align-items: center;
@@ -210,7 +214,7 @@ section { padding: 6rem 0; }
 .hero__badge--1 { top: 10%; left: -5%; color: var(--accent); }
 .hero__badge--2 { bottom: 15%; right: -5%; color: var(--secondary); }
 
-/* ── Section headings ── */
+/*   Section headings   */
 .section-label {
   font-family: var(--font-sub);
   font-size: 0.75rem; font-weight: 600;
@@ -229,7 +233,7 @@ section { padding: 6rem 0; }
 }
 .section-header { margin-bottom: 3.5rem; }
 
-/* ── About strip ── */
+/*   About strip   */
 #about {
   background: var(--light-neutral);
   position: relative;
@@ -268,7 +272,7 @@ section { padding: 6rem 0; }
 }
 .highlight-card__text { font-size: 0.9rem; opacity: 0.75; line-height: 1.6; }
 
-/* ── Projects ── */
+/*   Projects    */
 #projects { background: var(--primary); }
 .projects__header {
   display: flex; align-items: flex-end;
@@ -369,7 +373,7 @@ section { padding: 6rem 0; }
 }
 .btn--ghost:hover { background: rgba(255,239,225,0.1); transform: translateY(-2px); }
 
-/* ── Footer ── */
+/*   Footer   */
 footer {
   background: var(--dark-neutral); color: rgba(250,250,240,0.55);
   padding: 2.5rem 0; text-align: center;
@@ -388,14 +392,14 @@ footer a:hover { color: var(--primary); }
   text-transform: uppercase; letter-spacing: 0.08em;
 }
 
-/* ── Animations ── */
+/*   Animations   */
 .fade-up {
   opacity: 0; transform: translateY(28px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-/* ── Responsive ── */
+/*   Responsive   */
 @media (max-width: 900px) {
   .hero__grid, .about__grid, .tutoring__grid { grid-template-columns: 1fr; }
   .hero__visual { display: none; }
