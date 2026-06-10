@@ -201,7 +201,7 @@
 .timeline-item { position: relative; margin-bottom: 2.5rem; }
 .timeline-item:last-child { margin-bottom: 0; }
 .timeline-item::before {
-  content: ''; position: absolute; left: -2.375rem; top: 6px;
+  content: ''; position: absolute; left: -2.6rem; top: 6px;
   width: 12px; height: 12px; border-radius: 50%;
   background: var(--accent); border: 3px solid var(--primary);
   box-shadow: 0 0 0 2px var(--accent);
