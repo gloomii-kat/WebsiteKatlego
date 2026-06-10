@@ -2,7 +2,7 @@
   --sidebar-w: 240px;
 }
 
-/* ── Page header ── */
+/*  Page header  */
 .page-header {
   padding-top: calc(var(--nav-h) + 4rem);
   padding-bottom: 3rem;
