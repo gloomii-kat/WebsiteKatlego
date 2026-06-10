@@ -1,14 +1,9 @@
-  /* ─────────────────────────────────────────
-   projects.js  —  projects.html only
-   Call initProjects() after the DOM loads.
-───────────────────────────────────────── */
-
 function initProjects() {
   initProjectFilter();
   initProjectModal();
 }
 
-/* ── Filter ── */
+/*  Filter  */
 function initProjectFilter() {
   const filterItems  = document.querySelectorAll('.filter-item');
   const projectCards = document.querySelectorAll('.project-card');
@@ -35,7 +30,7 @@ function initProjectFilter() {
   });
 }
 
-/* ── Modal ── */
+/*  Modal  */
 function initProjectModal() {
   const overlay    = document.getElementById('modalOverlay');
   const modalCat   = document.getElementById('modalCat');
@@ -60,6 +55,7 @@ function initProjectModal() {
 
   function openModal(card) {
     const d = card.dataset;
+    const img = d.image;
     modalCat.textContent   = catLabels[d.category] || d.category;
     modalTitle.textContent = d.title;
     modalDesc.textContent  = d.descLong;
@@ -73,6 +69,11 @@ function initProjectModal() {
     modalThumb.innerHTML = `<span style="font-size:3.5rem">${d.emoji}</span>`;
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
+    if (img) {
+  modalThumb.innerHTML = `<img src="${img}" alt="${d.title}" />`;
+} else {
+  modalThumb.innerHTML = `<span style="font-size:3.5rem">${d.emoji}</span>`;
+}
   }
 
   function closeModal() {
